@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["class"],
+  mode:"jit",
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -10,6 +11,16 @@ const config = {
 	],
   prefix: "",
   theme: {
+    screens: {
+      xs: "400px",
+      sm: "600px",
+      md: "900px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1680px",
+      "4xl": "2200px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -18,7 +29,29 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: "poppins",
+        questrial: "Questrial",
+      },
       colors: {
+        primary: "#710280",
+        // "primary-light": "#07ae7133",
+        "primary-light": "#5C038C",
+        // secondaryLightGreen: "#C7F4C2",
+        secondaryLightGreen: "#967BB6",
+        secondaryLightPurple: "#D7D0FF",
+        secondaryLightYellow: "#FDDD8C",
+        secondaryLightRed: "#FFBBD7",
+        // secondaryGreen: "#0BAB7C",
+        secondaryGreen: "#896FBC",
+        secondaryRed: "#FC615C",
+        "hover-btn-color": "#420264",
+        "hover-btn-color2": "#C55FFC",
+        "hover-color": "#2d2d39",
+        "dark-light": "#393948",
+        "purple-haze":"#EFDCF9",
+        "main-white": "#ccc",
+        "text-color": "#152F37",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -52,6 +85,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundColor: {
+        main: "#f5f5f9",
+        "dark-main": "#13131A",
+        "dark-card": "#1C1C24",
       },
       borderRadius: {
         lg: "var(--radius)",
